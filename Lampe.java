@@ -19,11 +19,13 @@ class Lampe {
         this.allume = false;
     }
 
+    public boolean isAllume() {
+        return this.allume;
+    }
+
     @Override
     public String toString() {
-        return "Lampe{" +
-                "nom='" + nom + '\'' +
-                ", allume=" + allume +
-                '}';
+        String etat = allume ? "On" : "Off";
+        return nom + ": " + etat;
     }
 }
